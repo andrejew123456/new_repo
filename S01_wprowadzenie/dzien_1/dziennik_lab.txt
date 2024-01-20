@@ -1,0 +1,5 @@
+2024-01-10 Synteza białka: Sukces
+2024-01-11 Test pH: Niepowodzenie
+2024-01-12 Destylacja: Sukces
+
+ testst 
