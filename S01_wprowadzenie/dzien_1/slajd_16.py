@@ -1,3 +1,8 @@
-# Priorytet operacji
-wynik = (3 + 2) * 2**2 / 2  # Wynik: 10.0
-print(wynik)
+#### ROZWIAZANIE ####
+
+
+name_surname = "Zofia Zdolna"
+age = 18
+city = "New York"
+
+print(name_surname, age, city)

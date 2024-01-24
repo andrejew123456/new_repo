@@ -1,15 +1,18 @@
-#zastosowanie range()
-def testuj_funkcje(n):
-    return n * n
+### Podstawowe operacje na listach ###
 
-# Testowanie funkcji z różnymi wartościami
-for n in range(1, 5):
-    wynik = testuj_funkcje(n)
-    print(f"Test dla n={n}: {wynik}")
+#  + i *
+[1, 2 , 3] + [4, 5, 6] >> [1, 2, 3, 4, 5, 6]
+[1, 2, 3] * 3  >>  [1, 2, 3, 1, 2, 3, 1, 2, 3]
 
-def symuluj_klikniecie(i):
-    print( i * "CLICK ")
-    
-# Iteracja przez liczby do symulacji
-for i in range(3):
-    symuluj_klikniecie(i)
+#slice
+L = ['mielonka', "Mielonka", "MIELONKA!"]
+L[2]   >>  'MIELONKA!'
+L[-2]  >>  'Mielonka'
+L[1:]  >>  ['Mielonka', 'MIELONKA!']
+
+#macierze
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrix[1]  >> [4, 5, 6]
+matrix[1][1] >> 5
+
+

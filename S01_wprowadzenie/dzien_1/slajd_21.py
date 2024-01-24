@@ -1,9 +1,5 @@
-# Użycie metody str.format()
-imie = "Anna"
-powitanie = "Cześć, {}!".format(imie)
-print(powitanie)
+# Zaokrąglenie do najbliższej liczby całkowitej
+print(round(3.75))  # Wynik: 4
 
-# Użycie f-string
-wiek = 30
-tekst_z_fstring = f"{imie} ma {wiek} lat."
-print(tekst_z_fstring)
+# Zaokrąglenie do dwóch miejsc po przecinku
+print(round(3.757, 2))  # Wynik: 3.76

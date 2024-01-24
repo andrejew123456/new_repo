@@ -1,11 +1,9 @@
-tekst = "Python jest super!"
+# Dzielenie zwykłe
+print(10 / 3)  # Wynik: 3.3333333333333335
 
-# Długość ciągu znaków
-print(len(tekst))
+# Dzielenie całkowite
+print(10 // 3)  # Wynik: 3
 
-# Zmiana wielkości liter
-print(tekst.upper())
-print(tekst.lower())
+# Modulo - reszta z dzielenia
+print(10 % 3)  # Wynik: 1
 
-# Zastąpienie fragmentu tekstu
-print(tekst.replace("super", "fantastyczny"))

@@ -1,9 +1,6 @@
-#listy
-owoce = ["jabłko", "banan", "wiśnia"]
-for owoc in owoce:
-    print(owoc)
+print("Witaj, świecie!")
+print("Wynik działania wynosi:", 10 + 5)
 
-#tuple
-wymiary = (20, 30, 40)
-for wymiar in wymiary:
-    print(wymiar)
+
+imie = input("Jak masz na imię? ")
+print("Cześć,", imie)

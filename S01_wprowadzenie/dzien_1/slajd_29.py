@@ -1,5 +1,8 @@
-#iteracja przez stringi
+#len()
+zdanie = "Python jest zabawny."
+print("Liczba znaków w zdaniu:", len(zdanie))
 
-zdanie = "Witaj świecie!"
-for litera in zdanie:
-    print(litera)
+#type()
+print(type(123))        # Wynik: <class 'int'>
+print(type("Python"))   # Wynik: <class 'str'>
+print(type([1, 2, 3]))  # Wynik: <class 'list'>

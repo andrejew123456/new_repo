@@ -1,16 +1,11 @@
-#if
+tekst = "Python jest super!"
 
-wiek = 20
-if wiek >= 18:
-    print("Jesteś pełnoletni.")
+# Długość ciągu znaków
+print(len(tekst))
 
-#else i elif
-ocena = 75
-if ocena >= 90:
-    print("Bardzo dobry!")
-elif ocena >= 80:
-    print("Dobry")
-elif ocena >= 70:
-    print("Dostateczny")
-else:
-    print("Musisz jeszcze popracować.")
+# Zmiana wielkości liter
+print(tekst.upper())
+print(tekst.lower())
+
+# Zastąpienie fragmentu tekstu
+print(tekst.replace("super", "fantastyczny"))

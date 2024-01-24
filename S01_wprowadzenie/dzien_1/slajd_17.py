@@ -1,5 +1,8 @@
-# Zaokrąglenie do najbliższej liczby całkowitej
-print(round(3.75))  # Wynik: 4
-
-# Zaokrąglenie do dwóch miejsc po przecinku
-print(round(3.757, 2))  # Wynik: 3.76
+# Przykład dodawania
+x=3 + 2
+# Przykład odejmowania
+y=7 - 5
+# Przykład mnożenia
+z=4 * 2
+# Przykład dzielenia
+u=10 / 2

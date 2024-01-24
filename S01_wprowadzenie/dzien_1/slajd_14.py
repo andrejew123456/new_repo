@@ -1,20 +1,13 @@
-# Dodawanie
-x=5 + 3  # Wynik: 8
+#/// To jest komentarz, w którym użyłem trzech ukośników na początku dla demonstracji.
+print("Hello, World!")  # /// Ten komentarz również zawiera trzy ukośniki na końcu dla demonstracji.
+ # slajd11
 
-# Odejmowanie
-o=10 - 2  # Wynik: 8
 
-# Mnożenie
-mn=4 * 2  # Wynik: 8
 
-# Dzielenie
-d=16 / 2  # Wynik: 8.0
+'''
+To jest wieloliniowy komentarz w Pythonie.
+Możesz napisać tyle linii tekstów, ile potrzebujesz.
+Interpreter Pythona zignoruje te linie podczas wykonania kodu.
+'''
 
-# Dzielenie całkowite
-dc=9 // 2  # Wynik: 4
-
-# Modulo
-m=7 % 3  # Wynik: 1
-
-# Potęgowanie
-p=2 ** 3  # Wynik: 8
+print("Hello, World!")

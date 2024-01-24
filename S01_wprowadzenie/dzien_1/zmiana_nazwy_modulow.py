@@ -15,8 +15,8 @@ import os
 
 # Zakładając, że masz pliki od slajd1.py do slajd5.py
 # i chcesz zmienić ich nazwy na slajd2.py do slajd6.py
-for i in range(34, 18, -1):
+for i in range(16, 9, -1):
     print(i)
-    stara_nazwa = f'slajd_{i}.py'
-    nowa_nazwa = f'slajd_{i+1}.py'
+    stara_nazwa = f'slajd{i}.py'
+    nowa_nazwa = f'slajd_{i}.py'
     os.rename(stara_nazwa, nowa_nazwa)

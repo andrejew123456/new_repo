@@ -1,10 +1,10 @@
-wiek = 20
-ma_prawo_jazdy = True
+tekst = "Python jest super!"
 
-if wiek >= 18:
-    if ma_prawo_jazdy:
-        print("Możesz prowadzić samochód.")
-    else:
-        print("Nie masz prawa jazdy.")
-else:
-    print("Nie jesteś pełnoletni.")
+# Wyszukiwanie w tekście
+szukaj = "Python"
+pozycja = tekst.find(szukaj)
+print(f"'{szukaj}' znajduje się na pozycji: {pozycja}")
+
+# Podmiana w tekście
+tekst_zmieniony = tekst.replace("super", "wspaniały")
+print(tekst_zmieniony)
