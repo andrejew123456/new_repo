@@ -1,23 +1,11 @@
-class Pojazd:
-    def __init__(self, nazwa, max_predkosc):
-        self.nazwa = nazwa
-        self.max_predkosc = max_predkosc
-    def wyswietl_info(self):
-        return f"{self.nazwa}, Max prędkość: {self.max_predkosc}"
-
-
-class Samochod(Pojazd):
-    def __init__(self, nazwa, max_predkosc, liczba_drzwi):
-        super().__init__(nazwa, max_predkosc)
-        self.liczba_drzwi = liczba_drzwi
-
-    # def wyswietl_info(self):
-    #     return f"{self.nazwa}, Max prędkość: {self.max_predkosc}, Drzwi: {self.liczba_drzwi}"
-
-
-poj = Pojazd("Opel", 200)
-print(poj.nazwa, poj.max_predkosc)
-print(poj.wyswietl_info())
-
-sam = Samochod("Cupra", 310, 4)
-print(sam.wyswietl_info())
+####   ZADANIE   ####
+"""
+Opis Zadania:
+Stwórz system zarządzania biblioteką, który pozwala na reprezentowanie książek i czasopism. Zadanie to obejmuje stworzenie klas bazowych i pochodnych, a także zastosowanie dziedziczenia.
+Krok 1: Stwórz Klasę Bazową Publikacja
+Stwórz klasę Publikacja, która będzie zawierała wspólne atrybuty dla książek i czasopism, takie jak tytuł i autor/autorzy.
+Krok 2: Stwórz Klasy Pochodne Ksiazka i Czasopismo
+Klasy Ksiazka i Czasopismo będą dziedziczyć z klasy Publikacja i będą miały dodatkowe specyficzne atrybuty.
+Krok 3: Testowanie Klas
+Stwórz obiekty dla każdej klasy i przetestuj ich działanie
+"""

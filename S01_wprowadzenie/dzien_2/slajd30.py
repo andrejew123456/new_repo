@@ -1,25 +1,12 @@
-class Figura:
-    def pole(self):
-        pass
+class Samochod:
+    def __init__(self, marka):
+        self._marka = marka  # Atrybut chroniony
 
-class Kwadrat(Figura):
-    def __init__(self, bok):
-        self.bok = bok
+class SportowySamochod(Samochod):
+    def __init__(self, marka, model):
+        super().__init__(marka)
+        self.model = model
+        print("Marka:", self._marka)  # Dostęp do atrybutu chronionego
 
-    def pole(self):
-        return self.bok ** 2
-
-
-class Kolo(Figura):
-    def __init__(self, promien):
-        self.promien = promien
-
-    def pole(self):
-        return 3.14 * self.promien ** 2
-
-
-figury = [Kwadrat(2), Kolo(3)]
-print(figury)
-
-for figura in figury:
-    print(figura.pole())
+auto = SportowySamochod("Toyota", "Supra")
+print(auto._marka)

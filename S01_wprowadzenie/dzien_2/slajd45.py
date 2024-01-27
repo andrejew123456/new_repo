@@ -1,6 +1,15 @@
-#### Obsluga wyjatkow ###,
+###   Przyklad zastosowania wlasnych wyjatkow   ###
 
+class BrakDanych(Exception):
+    """Wyjątek rzucany, gdy brakuje niezbędnych danych."""
+
+def oblicz_srednia(oceny):
+    if not oceny:
+        raise BrakDanych("Lista ocen jest pusta.")
+    return sum(oceny) / len(oceny)
+
+# Przykładowe wywołanie funkcji
 try:
-    liczba = int(input("Podaj liczbę: "))
-except ValueError:
-    print("To nie jest liczba!")
+    srednia = oblicz_srednia([])
+except BrakDanych as e:
+    print(e)

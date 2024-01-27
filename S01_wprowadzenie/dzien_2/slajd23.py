@@ -1,24 +1,44 @@
+####  Z DUPLIKACJĄ KODU
+
 class Pojazd:
     def __init__(self, nazwa, max_predkosc):
         self.nazwa = nazwa
         self.max_predkosc = max_predkosc
+    def wyswietl_info(self):
+        return f"{self.nazwa}, Max prędkość: {self.max_predkosc}"
+
+
+class Samochod:
+    def __init__(self, nazwa, max_predkosc, liczba_drzwi):
+        self.nazwa = nazwa
+        self.max_predkosc = max_predkosc
+        self.liczba_drzwi = liczba_drzwi
+
+    def wyswietl_info(self):
+        return f"{self.nazwa}, Max prędkość: {self.max_predkosc}, Drzwi: {self.liczba_drzwi}"
+
+
+####Z DZIEDZICZEMIEM I METODA SUPER()
+class Pojazd:
+    def __init__(self, nazwa, max_predkosc):
+        self.nazwa = nazwa
+        self.max_predkosc = max_predkosc
+    def wyswietl_info(self):
+        return f"{self.nazwa}, Max prędkość: {self.max_predkosc}"
+
 
 class Samochod(Pojazd):
-    def liczba_kol(self):
-        print("Ma 4 koła")
+    def __init__(self, nazwa, max_predkosc, liczba_drzwi):
+        super().__init__(nazwa, max_predkosc)
+        self.liczba_drzwi = liczba_drzwi
 
-class Motocykl(Pojazd):
-    def liczba_kol(self):
-        print("Ma cztery koła")
+    def wyswietl_info(self):
+        return f"{self.nazwa}, Max prędkość: {self.max_predkosc}, Drzwi: {self.liczba_drzwi}"
 
 
-samochod = Samochod("Opel", 200)
-motocykl = Motocykl("Suzuki", 300)
-
-print(samochod.nazwa)
-print(samochod.max_predkosc)
-samochod.liczba_kol()
-
-print(motocykl.nazwa)
-print(motocykl.max_predkosc)
-motocykl.liczba_kol()
+# poj = Pojazd("Opel", 200)
+# print(poj.nazwa, poj.max_predkosc)
+# print(poj.wyswietl_info())
+#
+# sam = Samochod("Cupra", 310, 4)
+# print(sam.wyswietl_info())

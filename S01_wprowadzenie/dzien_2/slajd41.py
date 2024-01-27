@@ -1,6 +1,6 @@
-#Exception
-raise Exception("To jest ogólny wyjątek")
+#### Obsluga wyjatkow ###,
 
-#TypeError
-liczba = 5
-"abc" + liczba
+try:
+    liczba = int(input("Podaj liczbę: "))
+except ValueError:
+    print("To nie jest liczba!")

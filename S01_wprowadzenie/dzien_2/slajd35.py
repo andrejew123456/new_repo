@@ -1,24 +1,35 @@
-###   GETTERY i SETTERY   ####
+###   ROZWIAZANIE   ###
+"""
+Zadanie
+Stwórz dekorator, który będzie mierzył i wyświetlał czas wykonania dowolnej funkcji. Dekorator ten może być używany do monitorowania wydajności różnych części kodu.
+"""
 
-class Osoba:
-    def __init__(self, imie, wiek):
-        self.imie = imie
-        self._wiek = wiek
+"""Krok 1: Definicja Dekoratora
+Stwórz funkcję dekoratora, która przyjmuje funkcję jako argument i zwraca nową funkcję, która mierzy czas wykonania oryginalnej funkcji.
+"""
+import time
+def measuretime(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        func(*args, **kwargs)
+        end = time.time()
+        print(f"Time needed: {end - start} seconds")
+    return wrapper
 
-    @property
-    def wiek(self):
-        return self._wiek
+"""Krok 2: Użycie Dekoratora
+Użyj dekoratora measuretime do zmierzenia czasu wykonania przykładowej funkcji.
+"""
+@measuretime
+def wastetime():
+    sum([i**2 for i in range(1000000)])
 
-    @wiek.setter
-    def wiek(self, nowy_wiek):
-        if nowy_wiek > 0:
-            self._wiek = nowy_wiek
-        else:
-            raise ValueError("Wiek musi być wartością dodatnią")
+@measuretime
+def suma(a, b):
+    return a + b
 
-# Użycie klasy
-osoba = Osoba("Jan", 30)
-print(osoba.wiek)  # 30
-osoba.wiek = 35   # poprawne ustawienie wieku
-print(osoba.wiek)  # 35
-osoba.wiek = -5   # wywoła wyjątek ValueError
+@measuretime
+def sleep(sec):
+    time.sleep(sec)
+
+wastetime()
+sleep(20)

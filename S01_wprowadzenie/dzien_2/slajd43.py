@@ -1,8 +1,13 @@
-#IndexError
-a = [1,2,3]
-a[4]
+####   Instrukcja raise   ###
 
-#KeyError
-dict= {1: "1", 2: "2"}
+def dziel(a, b):
+    if b == 0:
+        raise ValueError("Dzielnik nie może być zerem.")
+    return a / b
 
-dict[3]
+# Przykładowe wywołanie funkcji
+try:
+    wynik = dziel(10, 0)
+except ValueError as e:
+    print(e)
+

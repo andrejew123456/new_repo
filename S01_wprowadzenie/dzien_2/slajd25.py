@@ -1,44 +1,50 @@
-####  Z DUPLIKACJĄ KODU
+####   ROZWIĄZANIE   ######
 
-class Pojazd:
-    def __init__(self, nazwa, max_predkosc):
-        self.nazwa = nazwa
-        self.max_predkosc = max_predkosc
-    def wyswietl_info(self):
-        return f"{self.nazwa}, Max prędkość: {self.max_predkosc}"
+"""
+Krok 1: Stwórz Klasę Bazową Publikacja
+Stwórz klasę Publikacja, która będzie zawierała wspólne atrybuty dla książek i czasopism, takie jak tytuł i autor/autorzy.
+"""
 
+class Publikacja:
+    def __init__(self, tytul, autorzy):
+        self.tytul = tytul
+        self.autorzy = autorzy
 
-class Samochod:
-    def __init__(self, nazwa, max_predkosc, liczba_drzwi):
-        self.nazwa = nazwa
-        self.max_predkosc = max_predkosc
-        self.liczba_drzwi = liczba_drzwi
-
-    def wyswietl_info(self):
-        return f"{self.nazwa}, Max prędkość: {self.max_predkosc}, Drzwi: {self.liczba_drzwi}"
+    def pokaz_info(self):
+        return f"Tytuł: {self.tytul}, Autorzy: {self.autorzy}"
 
 
-####Z DZIEDZICZEMIEM I METODA SUPER()
-class Pojazd:
-    def __init__(self, nazwa, max_predkosc):
-        self.nazwa = nazwa
-        self.max_predkosc = max_predkosc
-    def wyswietl_info(self):
-        return f"{self.nazwa}, Max prędkość: {self.max_predkosc}"
+"""
+Krok 2: Stwórz Klasy Pochodne Ksiazka i Czasopismo
+Klasy Ksiazka i Czasopismo będą dziedziczyć z klasy Publikacja i będą miały dodatkowe specyficzne atrybuty.
+"""
+
+class Ksiazka(Publikacja):
+    def __init__(self, tytul, autorzy, liczba_stron):
+        super().__init__(tytul, autorzy)
+        self.liczba_stron = liczba_stron
+
+    def pokaz_info(self):
+        return f"{super().pokaz_info()}, Liczba stron: {self.liczba_stron}"
+
+class Czasopismo(Publikacja):
+    def __init__(self, tytul, autorzy, numer_wydania):
+        super().__init__(tytul, autorzy)
+        self.numer_wydania = numer_wydania
+
+    def pokaz_info(self):
+        return f"{super().pokaz_info()}, Numer wydania: {self.numer_wydania}"
 
 
-class Samochod(Pojazd):
-    def __init__(self, nazwa, max_predkosc, liczba_drzwi):
-        super().__init__(nazwa, max_predkosc)
-        self.liczba_drzwi = liczba_drzwi
+"""
+Krok 3: Testowanie Klas
+Stwórz obiekty dla każdej klasy i przetestuj ich działanie.
+"""
 
-    def wyswietl_info(self):
-        return f"{self.nazwa}, Max prędkość: {self.max_predkosc}, Drzwi: {self.liczba_drzwi}"
+# Tworzenie obiektów
+ksiazka = Ksiazka("Władca Pierścieni", "J.R.R. Tolkien", 1178)
+czasopismo = Czasopismo("National Geographic", "Różni Autorzy", 202)
 
-
-# poj = Pojazd("Opel", 200)
-# print(poj.nazwa, poj.max_predkosc)
-# print(poj.wyswietl_info())
-#
-# sam = Samochod("Cupra", 310, 4)
-# print(sam.wyswietl_info())
+# Testowanie metod
+print(ksiazka.pokaz_info())
+print(czasopismo.pokaz_info())

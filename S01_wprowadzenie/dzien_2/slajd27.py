@@ -1,50 +1,25 @@
-####   ROZWIĄZANIE   ######
+class Figura:
+    def pole(self):
+        pass
 
-"""
-Krok 1: Stwórz Klasę Bazową Publikacja
-Stwórz klasę Publikacja, która będzie zawierała wspólne atrybuty dla książek i czasopism, takie jak tytuł i autor/autorzy.
-"""
+class Kwadrat(Figura):
+    def __init__(self, bok):
+        self.bok = bok
 
-class Publikacja:
-    def __init__(self, tytul, autorzy):
-        self.tytul = tytul
-        self.autorzy = autorzy
-
-    def pokaz_info(self):
-        return f"Tytuł: {self.tytul}, Autorzy: {self.autorzy}"
+    def pole(self):
+        return self.bok ** 2
 
 
-"""
-Krok 2: Stwórz Klasy Pochodne Ksiazka i Czasopismo
-Klasy Ksiazka i Czasopismo będą dziedziczyć z klasy Publikacja i będą miały dodatkowe specyficzne atrybuty.
-"""
+class Kolo(Figura):
+    def __init__(self, promien):
+        self.promien = promien
 
-class Ksiazka(Publikacja):
-    def __init__(self, tytul, autorzy, liczba_stron):
-        super().__init__(tytul, autorzy)
-        self.liczba_stron = liczba_stron
-
-    def pokaz_info(self):
-        return f"{super().pokaz_info()}, Liczba stron: {self.liczba_stron}"
-
-class Czasopismo(Publikacja):
-    def __init__(self, tytul, autorzy, numer_wydania):
-        super().__init__(tytul, autorzy)
-        self.numer_wydania = numer_wydania
-
-    def pokaz_info(self):
-        return f"{super().pokaz_info()}, Numer wydania: {self.numer_wydania}"
+    def pole(self):
+        return 3.14 * self.promien ** 2
 
 
-"""
-Krok 3: Testowanie Klas
-Stwórz obiekty dla każdej klasy i przetestuj ich działanie.
-"""
+figury = [Kwadrat(2), Kolo(3)]
+print(figury)
 
-# Tworzenie obiektów
-ksiazka = Ksiazka("Władca Pierścieni", "J.R.R. Tolkien", 1178)
-czasopismo = Czasopismo("National Geographic", "Różni Autorzy", 202)
-
-# Testowanie metod
-print(ksiazka.pokaz_info())
-print(czasopismo.pokaz_info())
+for figura in figury:
+    print(figura.pole())

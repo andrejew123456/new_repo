@@ -1,11 +1,15 @@
-class Samochod:
-    def __init__(self, marka):
-        self.__marka = marka  # Atrybut prywatny
+####   Dekoratory   ####
 
-    def pokaz_marke(self):
-        return self.__marka
+def my_decorator(func):
+    def wrapper():
+        print("Before func.")
+        func()
+        print("After func.")
+    return wrapper
 
-samochod = Samochod("Toyota")
-print(samochod.pokaz_marke())  # Dostęp przez metodę klasy
-print(samochod.__marka) # Błąd: atrybut nie jest dostępny z zewnątrz
-# print(samochod._Samochod__marka)  #Dostanie sie do prywatnego atrybutu przez obj._ClassName__atrybut
+
+def say_hello():
+    print("Hello!")
+
+roll = my_decorator(say_hello)
+roll()

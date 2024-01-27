@@ -1,14 +1,13 @@
-### Obsluga wyjatkow: else i finally   ####
+"""
+Zadanie: Kalkulator Dzielący z Obsługą Wyjątków
+Opis Zadania:
+Stwórz prosty kalkulator, który wykonuje dzielenie dwóch liczb podanych przez użytkownika. Zadbaj o to, aby program obsługiwał wyjątki związane z nieprawidłowym wejściem (np. dzielenie przez zero, wprowadzenie wartości, która nie jest liczbą).
 
-def wczytaj_liczbe():
-    try:
-        liczba = int(input("Podaj liczbę: "))
-    except ValueError:
-        print("To nie jest prawidłowa liczba.")
-    else:
-        print(f"Wprowadzono liczbę: {liczba}")
-        # Tutaj możemy wykonać dodatkowe operacje związane z liczbą
-    finally:
-        print("Koniec próby wczytania liczby.")
 
-wczytaj_liczbe()
+Krok 1: Definicja Funkcji dzielenie
+Stwórz funkcję dzielenie, która przyjmuje dwa argumenty i wykonuje dzielenie, a następnie obsługuje potencjalne wyjątki.
+
+Krok 2: Testowanie Funkcji
+Stwórz kilka testowych przypadków, aby przetestować działanie funkcji dzielenie.
+
+"""
