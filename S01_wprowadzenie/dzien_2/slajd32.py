@@ -1,14 +1,18 @@
-####   Dekoratory   ####
+class Samochod:
+    def __init__(self, marka):
+        self._marka = marka  # Atrybut chroniony
 
-def my_decorator(func):
-    def wrapper():
-        print("Before func.")
-        func()
-        print("After func.")
-    return wrapper
+        print(self._marka)
 
-@my_decorator
-def say_hello():
-    print("Hello!")
+class SportowySamochod(Samochod):
+    def __init__(self, marka, model):
+        super().__init__(marka)
+        self.model = model
+        print("Marka:", self._marka)  # Dostęp do atrybutu chronionego
 
-say_hello()
+auto = SportowySamochod("Toyota", "Supra")
+print(auto._marka)
+print(auto.model)
+
+auto1 = Samochod("Audi")
+print(auto1._marka)

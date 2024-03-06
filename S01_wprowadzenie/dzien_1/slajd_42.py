@@ -1,40 +1,22 @@
-### Pliki ###
-myfile = open('myfile.txt', 'w') 	#Otwarcie do zapisu tekstowego
-myfile.write('witaj pliku tekstowy\n')  #   21  #Zapisanie wiersza tekstu
-myfile.close() 	#Zrzucenie bufora wyjściowego na dysk
-myfile = open('myfile.txt')  	#Otwarcie pliku
-myfile.readline()   #   'witaj pliku tekstowy\n'  #Wczytywanie wierszy
-myfile.readline()  #   ''  	#Pusty łańcuch znaków - koniec pliku
+## Rozwiązanie  ###
+
+pracownicy = {
+    "001": {"imię": "Jan", "nazwisko": "Kowalski", "stanowisko": "Programista", "rok_zatrudnienia": 2018},
+    "002": {"imię": "Anna", "nazwisko": "Nowak", "stanowisko": "Analityk", "rok_zatrudnienia": 2020},
+    "003": {"imię": "Marek", "nazwisko": "Wiśniewski", "stanowisko": "Tester", "rok_zatrudnienia": 2019}
+}
+
+# Dodanie Nowego Pracownika: Dodaj nowego pracownika do słownika. Na przykład, pracownika o ID "004" z odpowiednimi danymi osobowymi.
+
+D2 = {"004": {"imię": "Karol", "nazwisko": "Wiśniewski", "stanowisko": "Tester", "rok_zatrudnienia": 2019}}
+pracownicy.update(D2)
+
+# drugi sposob:
+pracownicy["005"] = {"imię": "Bartosz", "nazwisko": "Wiśniewski", "stanowisko": "Tester", "rok_zatrudnienia": 2019}
 
 
-#do odczytu
-with open('dziennik_lab.txt') as file:
-    print(file.read())
-#do zapisu
-with open('dziennik_lab.txt', "") as file:
-    print(file.read())
+# Usunięcie Pracownika: Usuń pracownika z bazy danych. Na przykład, pracownika o ID "002".
+pracownicy.pop("002")
 
-#tryb dopisywania
-with open('dziennik_lab.txt', "a") as file:
-    print(file.write("nowy test 25.01 \n"))
-
-
-# czytanie pliku wiersz po wierszu:
-
-# for line in open('myfile.txt'):
-#     print(line, end='')
-
-
-"""
-
-Opis:
-W ramach tego zadania będziesz pracować z plikiem tekstowym, który reprezentuje dziennik laboratoryjny. Każda linia w pliku zawiera wpis z datą, nazwą eksperymentu i wynikami. Twoim zadaniem jest przetworzenie tego pliku w celu uzyskania i zapisania konkretnych informacji.
-Zadania do wykonania:
-Odczytanie i Wyświetlenie Zawartości Pliku: Otwórz plik i wydrukuj jego zawartość.
-Dopisanie nowego eksperymentu do istniejącego pliku
-Wskazówki:
-Do odczytania pliku użyj with open(...) as file:
-
-with open('dziennik_lab.txt') as file:
-    print(file.read())
-"""
+# Aktualizacja Danych Pracownika: Zaktualizuj dane jednego z pracowników. Na przykład, zmień stanowisko pracownika o ID "001" na "Starszy Programista"
+pracownicy["001"]["stanowisko"] = "starszy programista"

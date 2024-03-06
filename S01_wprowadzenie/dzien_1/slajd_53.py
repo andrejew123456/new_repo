@@ -1,15 +1,20 @@
-#zastosowanie range()
-def testuj_funkcje(n):
-    return n * n
+#funkcja range() simple
 
-# Testowanie funkcji z różnymi wartościami
-for n in range(1, 5):
-    wynik = testuj_funkcje(n)
-    print(f"Test dla n={n}: {wynik}")
+# for i in range(5):
+#     print(i)
+# Wynik: 0, 1, 2, 3, 4
 
-def symuluj_klikniecie(i):
-    print( i * "CLICK ")
-    
-# Iteracja przez liczby do symulacji
-for i in range(3):
-    symuluj_klikniecie(i)
+#funkcja range z punktem startu i zakończenia
+# for i in range(2, 6):
+#     print(i)
+# Wynik: 2, 3, 4, 5
+
+#funkcja range() z start, stop i step
+# for i in range(0, 10, 2):
+#     print(i)
+# Wynik: 0, 2, 4, 6, 8
+
+my_list = ['apple', 'banana', 'orange']
+
+for index, value in enumerate(my_list):
+    print(f"Index: {index}, Value: {value}")

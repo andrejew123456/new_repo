@@ -1,10 +1,14 @@
-###   ROZWIAZANIE  ###
+"""
+W laboratorium przechowywane są różne substancje w małych pojemnikach. Każdy pojemnik ma etykietę z nazwą substancji.
+Twoim zadaniem jest zorganizowanie informacji o tych substancjach przy użyciu Pythona.
+
+Dane:
 substancje = ["woda", "etanol", "kwas siarkowy", "woda", "chlor", "etanol"]
 
-liczba_substancji = len(substancje)
-print(liczba_substancji)
-substancje.sort()
-print(substancje)
-substancje.append("azot")
-substancje.extend(["kwas mlekowy", "siarka"])
-print(substancje)
+Zadania do wykonania:
+Zliczenie Substancji: Oblicz, ile razy każda substancja pojawia się na liście.
+Uporządkuj listę substancji
+Dodaj do listy dodatkowe substancje
+przypisz do zmiennej i zwróć elementy listy z pozycji 1,2,3
+
+"""

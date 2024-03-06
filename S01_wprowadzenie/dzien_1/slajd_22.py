@@ -14,3 +14,6 @@ print(randint_number)
 
 randrange = random.randrange(0,9, 2)
 print(randrange)
+
+randomchoice = random.choice([1,2,7,3,2])
+print(randomchoice)

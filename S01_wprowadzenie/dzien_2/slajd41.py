@@ -1,6 +1,8 @@
-#### Obsluga wyjatkow ###,
+#IndexError
+a = [1,2,3]
+a[4]
 
-try:
-    liczba = int(input("Podaj liczbę: "))
-except ValueError:
-    print("To nie jest liczba!")
+#KeyError
+dict= {1: "1", 2: "2"}
+
+dict[3]

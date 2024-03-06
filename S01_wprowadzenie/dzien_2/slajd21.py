@@ -1,24 +1,36 @@
-class Pojazd:
-    def __init__(self, nazwa, max_predkosc):
-        self.nazwa = nazwa
-        self.max_predkosc = max_predkosc
+class Animal:
+   def __init__(self):
+       print('Animal!')
 
-class Samochod(Pojazd):
-    def liczba_kol(self):
-        print("Ma 4 koła")
-
-class Motocykl(Pojazd):
-    def liczba_kol(self):
-        print("Ma cztery koła")
+   def increase_age(self):
+       print('increase_age!')
 
 
-samochod = Samochod("Opel", 200)
-motocykl = Motocykl("Suzuki", 300)
+class Mammal(Animal):
+   def __init__(self):
+       Animal.__init__(self)
+       print('Mammal!')
 
-print(samochod.nazwa)
-print(samochod.max_predkosc)
-samochod.liczba_kol()
+   def introduce_yourself(self):
+       print('introduce_yourself!')
 
-print(motocykl.nazwa)
-print(motocykl.max_predkosc)
-motocykl.liczba_kol()
+
+class Cat(Mammal):
+   def __init__(self):
+       Mammal.__init__(self)
+       print('Cat!')
+
+   def purr(self):
+       print('purr!')
+
+
+mammal_1 = Mammal()
+mammal_1.introduce_yourself()
+mammal_1.increase_age()
+
+print('-')
+
+cat_1 = Cat()
+cat_1.introduce_yourself()
+cat_1.purr()
+cat_1.increase_age()

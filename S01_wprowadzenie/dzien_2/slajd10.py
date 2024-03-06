@@ -7,4 +7,7 @@ class MixedNames:               #Zdefiniowanie klasy
 
 x = MixedNames(1)               #Utworzenie dwóch obiektów instancji
 y=MixedNames(2)                 #Każdy ma własne dane
-print(x.dispaly(), y.dispaly())
+# print(x.dispaly(), y.dispaly())
+
+x.dispaly()
+y.dispaly()

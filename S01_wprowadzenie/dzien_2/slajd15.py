@@ -1,9 +1,15 @@
-"""
-Wywołanie za pomocą instancji
+class NextClass:                    #Zdefiniowanie klasy
+    def printer(self, text):        #Zdefiniowanie metody
+        self.message = text         #Modyfikacja instancji
+        print(self.message)         #Dostęp do instancji
 
-instancja.metoda(argumenty…)
 
-Wywołanie za pomocą funkcji metod klas:
+x = NextClass()                     #Utworzenie instancji
+x.printer("wywołanie instancji")    #Wywołanie tej metody
+x.message                           #Modyfikacja instancji
 
-klasa.metoda(instancja, argumenty…)
-"""
+
+
+NextClass.printer(x, "wywołanie klasy") #Bezposrednie wywolanie klasy
+x.message                                   #Ponowna modyfikacja instancji
+

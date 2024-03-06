@@ -1,15 +1,13 @@
-###   Przyklad zastosowania wlasnych wyjatkow   ###
+####   Instrukcja raise   ###
 
-class BrakDanych(Exception):
-    """Wyjątek rzucany, gdy brakuje niezbędnych danych."""
-
-def oblicz_srednia(oceny):
-    if not oceny:
-        raise BrakDanych("Lista ocen jest pusta.")
-    return sum(oceny) / len(oceny)
+def dziel(a, b):
+    if b == 0:
+        raise ValueError("Dzielnik nie może być zerem.")
+    return a / b
 
 # Przykładowe wywołanie funkcji
 try:
-    srednia = oblicz_srednia([])
-except BrakDanych as e:
+    wynik = dziel(10, 0)
+except ValueError as e:
     print(e)
+

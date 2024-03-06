@@ -10,6 +10,9 @@ Stwórz klasę Pojazd, która będzie reprezentować ogólne cechy pojazdu. Klas
 
 """
 
+#####ROZWIAZANIE
+
+
 
 class Pojazd:
     liczba_kol = 4

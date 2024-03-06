@@ -1,28 +1,15 @@
-####   ROZWIAZANIE   ####
-"""
-Zadanie: Kalkulator Dzielący z Obsługą Wyjątków
-Opis Zadania:
-Stwórz prosty kalkulator, który wykonuje dzielenie dwóch liczb podanych przez użytkownika. Zadbaj o to, aby program obsługiwał wyjątki związane z nieprawidłowym wejściem (np. dzielenie przez zero, wprowadzenie wartości, która nie jest liczbą).
-"""
+###   Przyklad zastosowania wlasnych wyjatkow   ###
 
-"""Krok 1: Definicja Funkcji dzielenie
-Stwórz funkcję dzielenie, która przyjmuje dwa argumenty i wykonuje dzielenie, a następnie obsługuje potencjalne wyjątki.
-"""
-def dzielenie(a, b):
-    try:
-        wynik = a / b
-    except ZeroDivisionError:
-        return "Błąd: Dzielenie przez zero!"
-    except TypeError:
-        return "Błąd: Nieprawidłowy typ danych!"
-    else:
-        return wynik
+class BrakDanych(Exception):
+    """Wyjątek rzucany, gdy brakuje niezbędnych danych."""
 
+def oblicz_srednia(oceny):
+    if not oceny:
+        raise BrakDanych("Lista ocen jest pusta.")
+    return sum(oceny) / len(oceny)
 
-"""Krok 2: Testowanie Funkcji
-Stwórz kilka testowych przypadków, aby przetestować działanie funkcji dzielenie.
-"""
-# Przykładowe testy
-print(dzielenie(10, 2))  # Poprawne dzielenie
-print(dzielenie(5, 0))   # Dzielenie przez zero
-print(dzielenie("5", 2)) # Nieprawidłowy typ danych
+# Przykładowe wywołanie funkcji
+try:
+    srednia = oblicz_srednia([])
+except BrakDanych as e:
+    print(e)

@@ -1,15 +1,19 @@
-"""
-Opis:
-W ramach tego zadania będziesz pracować na słowniku reprezentującym dane pracowników w firmie. Każdy pracownik jest reprezentowany przez unikalny identyfikator (ID) i posiada przypisane do siebie informacje, takie jak imię, nazwisko, stanowisko i rok zatrudnienia.
-pracownicy = {
-    "001": {"imię": "Jan", "nazwisko": "Kowalski", "stanowisko": "Programista", "rok_zatrudnienia": 2018},
-    "002": {"imię": "Anna", "nazwisko": "Nowak", "stanowisko": "Analityk", "rok_zatrudnienia": 2020},
-    "003": {"imię": "Marek", "nazwisko": "Wiśniewski", "stanowisko": "Tester", "rok_zatrudnienia": 2019}
-}
-
-Zadania do wykonania:
-Dodanie Nowego Pracownika: Dodaj nowego pracownika do słownika. Na przykład, pracownika o ID "004" z odpowiednimi danymi osobowymi.
-Usunięcie Pracownika: Usuń pracownika z bazy danych. Na przykład, pracownika o ID "002".
-Aktualizacja Danych Pracownika: Zaktualizuj dane jednego z pracowników. Na przykład, zmień stanowisko pracownika o ID "001" na "Starszy Programista"
-
-"""
+D = {}                              # pusty słownik
+D2 = {"mielonka": 2, "jajka": 3}     #słownik dwuelementowy
+D = {"abc": {"def": 1, "ghi": 2}}   # zagnieżdżenie
+D = dict(name = "Bob", age=40)      #technika konstruowania słownika
+# D = dict(zip(keylist, valslist))    #zzipowane pary kluczy
+D=dict.fromkeys(["a", "b"], 0)         #przypisanie klucza a i b do wartości 0
+D["jajka"]                          #indeksowanie po kluczu
+D["jedzenie"]["szynka"]             #indeks indeksu
+"jajka" in D                        #sprawdzenie przynaleznosci
+D.keys()                            #lista kluczy
+D.values()                          #lista wartosci
+D.items()                           #lista kluczy i wartiosci
+D.copy                              #kopia obiektu
+D.update(D2)                        #dodanie
+D.pop("key")                          #usuwanie klucza
+len(D)                              #dlugosc slownika
+D["key"]  = 42                        #przypisanie wartosci do klucza
+del D["key"]                        #usuniecie klucza
+list(D.keys())                      #lista kluczy

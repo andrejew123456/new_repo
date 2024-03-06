@@ -1,13 +1,16 @@
-"""
-Zadanie: Kalkulator Dzielący z Obsługą Wyjątków
-Opis Zadania:
-Stwórz prosty kalkulator, który wykonuje dzielenie dwóch liczb podanych przez użytkownika. Zadbaj o to, aby program obsługiwał wyjątki związane z nieprawidłowym wejściem (np. dzielenie przez zero, wprowadzenie wartości, która nie jest liczbą).
+####   Tworzenie własnych wyjątków   ###
+class NieprawidlowaWartosc(Exception):
+    """Wyjątek rzucany, gdy wartość nie spełnia oczekiwań."""
+    pass
 
+def ustaw_wiek(wiek):
+    if wiek < 0:
+        raise NieprawidlowaWartosc("Wiek nie może być wartością ujemną.")
+    print(f"Wiek ustawiony na {wiek}.")
 
-Krok 1: Definicja Funkcji dzielenie
-Stwórz funkcję dzielenie, która przyjmuje dwa argumenty i wykonuje dzielenie, a następnie obsługuje potencjalne wyjątki.
+# Przykładowe wywołanie funkcji
+try:
+    ustaw_wiek(-5)
+except NieprawidlowaWartosc as e:
+    print(e)
 
-Krok 2: Testowanie Funkcji
-Stwórz kilka testowych przypadków, aby przetestować działanie funkcji dzielenie.
-
-"""

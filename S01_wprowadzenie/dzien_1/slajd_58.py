@@ -1,43 +1,30 @@
-## ZADANIE DOMOWE ###
-# Opis Zadania:
-# Stwórz grę, w której użytkownik musi odgadnąć losowo wygenerowany numer. Użytkownik ma ograniczoną liczbę prób. Po każdej próbie, program powinien informować, czy podana liczba jest za duża, za mała, czy prawidłowa. Jeśli użytkownik nie odgadnie liczby w wyznaczonej liczbie prób, gra kończy się porażką.
-#
-# Krok 1: Importowanie Modułu i Inicjalizacja Zmiennych
-# Importuj moduł random do wygenerowania losowego numeru i zdefiniuj zmienne.
+"""
+Napisz program, który używa pętli while do czytania liczby od użytkownika,
+a następnie sumuje te liczby do czasu wprowadzenia '0', po czym zakończy działanie.
 
-# Krok 2: Pętla while dla Gry
-# Użyj pętli while do przetwarzania prób użytkownika.
-#
-# Krok 3: Sprawdzenie Warunku Zakończenia Gry
-# Jeśli użytkownik nie zgadnie liczby w wyznaczonej liczbie prób, gra kończy się.
+Utwórz pętlę, która przetwarza dane wejściowe od użytkownika i kontynuuje działanie do momentu wprowadzenia określonego słowa kluczowego.
+"""
 
-import random
+# Inicjalizacja zmiennej do przechowywania sumy
+suma = 0
 
-# Krok 1: Importowanie Modułu i Inicjalizacja Zmiennych
+while True:
+    # Prośba o wprowadzenie liczby
+    liczba = input("Wprowadź liczbę (lub '0' aby zakończyć): ")
 
-# Wygeneruj losowy numer od 1 do 100
-szukana_liczba = random.randint(1, 100)
-
-# Maksymalna liczba prób
-max_proby = 5
-liczba_prob = 0
-
-
-# Krok 2: Pętla while dla Gry
-while liczba_prob < max_proby:
-    # Prośba o wprowadzenie liczby przez użytkownika
-    zgadnij = int(input("Zgadnij liczbę od 1 do 100: "))
-    liczba_prob += 1
-
-    # Sprawdzenie liczby i wyświetlenie odpowiedniego komunikatu
-    if zgadnij < szukana_liczba:
-        print("Za mało!")
-    elif zgadnij > szukana_liczba:
-        print("Za dużo!")
-    else:
-        print(f"Gratulacje! Zgadłeś liczbę po {liczba_prob} próbach.")
+    # Sprawdzenie, czy wprowadzona wartość to '0'
+    if liczba == '0':
         break
 
-# Krok 3: Sprawdzenie Warunku Zakończenia Gry
-if zgadnij != szukana_liczba:
-    print(f"Niestety, nie zgadłeś. Szukana liczba to {szukana_liczba}.")
+    # Sprawdzenie, czy wprowadzona wartość jest liczbą
+    # try:
+    liczba = float(liczba)
+    # except ValueError:
+    #     print("To nie jest liczba. Proszę spróbować ponownie.")
+    #     continue
+
+    # Dodanie liczby do sumy
+    suma += liczba
+
+# Wyświetlenie sumy po wyjściu z pętli
+print("Suma wprowadzonych liczb wynosi:", suma)

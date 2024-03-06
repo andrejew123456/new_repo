@@ -1,19 +1,15 @@
-"""
-1. Napisz program, który wyświetla każdy drugi element z listy owoców.
+#zastosowanie range()
+def testuj_funkcje(n):
+    return n * n
 
-2.Utwórz pętlę, która iteruje przez krotkę zawierającą różne typy danych (liczby, stringi, inne listy) i wyświetla ich typ
-"""
+# Testowanie funkcji z różnymi wartościami
+for n in range(1, 5):
+    wynik = testuj_funkcje(n)
+    print(f"Test dla n={n}: {wynik}")
 
-#1
-fruits = ['apple', 'pear', 'orange', 'banana', 'grape', 'mango', 'limon']
-
-for i in range(1, len(fruits), 2):
-    print(fruits[i])
-
-
-#2
-different_types = (123, "Python", [1, 2, 3], 45.67, {"jabłko", "banan"})
-
-# Iterowanie przez krotkę i wyświetlanie typu każdego elementu
-for element in different_types:
-    print(type(element))
+def symuluj_klikniecie(i):
+    print( i * "CLICK ")
+    
+# Iteracja przez liczby do symulacji
+for i in range(3):
+    symuluj_klikniecie(i)

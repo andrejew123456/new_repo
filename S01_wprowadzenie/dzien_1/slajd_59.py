@@ -1,39 +1,43 @@
-"""Opis Zadania:
-Napisz program, który analizuje oceny uczniów zapisane w słowniku.
-Dla każdego ucznia, program powinien określić kwalifikację na podstawie średniej oceny.
-"""
+## ZADANIE DOMOWE ###
+# Opis Zadania:
+# Stwórz grę, w której użytkownik musi odgadnąć losowo wygenerowany numer. Użytkownik ma ograniczoną liczbę prób. Po każdej próbie, program powinien informować, czy podana liczba jest za duża, za mała, czy prawidłowa. Jeśli użytkownik nie odgadnie liczby w wyznaczonej liczbie prób, gra kończy się porażką.
+#
+# Krok 1: Importowanie Modułu i Inicjalizacja Zmiennych
+# Importuj moduł random do wygenerowania losowego numeru i zdefiniuj zmienne.
 
-# Krok 1: Przygotowanie Danych
-# Zdefiniuj słownik zawierający nazwiska uczniów i listy ich ocen.
+# Krok 2: Pętla while dla Gry
+# Użyj pętli while do przetwarzania prób użytkownika.
+#
+# Krok 3: Sprawdzenie Warunku Zakończenia Gry
+# Jeśli użytkownik nie zgadnie liczby w wyznaczonej liczbie prób, gra kończy się.
 
-# Krok 2: Analiza Oceny i Przypisanie Kwalifikacji
-# Użyj pętli for do iteracji przez słownik i instrukcji warunkowych do przypisania kwalifikacji.
+import random
 
-# Krok 3: Wyświetlenie Wyników
-# Wyświetl kwalifikację każdego ucznia.
+# Krok 1: Importowanie Modułu i Inicjalizacja Zmiennych
 
-oceny_uczniow = {
-    "Anna Kowalska": [4, 3, 5, 4],
-    "Jan Nowak": [5, 5, 4, 5],
-    "Paweł Wiśniewski": [2, 3, 3, 2],
-    "Zofia Baranowska": [5, 5, 5, 5]
-}
+# Wygeneruj losowy numer od 1 do 100
+szukana_liczba = random.randint(1, 100)
 
-# Krok 2: Analiza Oceny i Przypisanie Kwalifikacji
-kwalifikacje = {}
+# Maksymalna liczba prób
+max_proby = 5
+liczba_prob = 0
 
-for uczen, lista_ocen in oceny_uczniow.items():
-    srednia = sum(lista_ocen) / len(lista_ocen)
 
-    if srednia >= 4.75:
-        kwalifikacje[uczen] = "Bardzo Dobry"
-    elif srednia >= 4:
-        kwalifikacje[uczen] = "Dobry"
-    elif srednia >= 3:
-        kwalifikacje[uczen] = "Dostateczny"
+# Krok 2: Pętla while dla Gry
+while liczba_prob < max_proby:
+    # Prośba o wprowadzenie liczby przez użytkownika
+    zgadnij = int(input("Zgadnij liczbę od 1 do 100: "))
+    liczba_prob += 1
+
+    # Sprawdzenie liczby i wyświetlenie odpowiedniego komunikatu
+    if zgadnij < szukana_liczba:
+        print("Za mało!")
+    elif zgadnij > szukana_liczba:
+        print("Za dużo!")
     else:
-        kwalifikacje[uczen] = "Niedostateczny"
+        print(f"Gratulacje! Zgadłeś liczbę po {liczba_prob} próbach.")
+        break
 
-# Krok 3: Wyświetlenie Wyników
-for uczen, kwalifikacja in kwalifikacje.items():
-    print(f"{uczen}: {kwalifikacja}")
+# Krok 3: Sprawdzenie Warunku Zakończenia Gry
+if zgadnij != szukana_liczba:
+    print(f"Niestety, nie zgadłeś. Szukana liczba to {szukana_liczba}.")

@@ -1,16 +1,14 @@
-####   Tworzenie własnych wyjątków   ###
-class NieprawidlowaWartosc(Exception):
-    """Wyjątek rzucany, gdy wartość nie spełnia oczekiwań."""
-    pass
+### Obsluga wyjatkow: else i finally   ####
 
-def ustaw_wiek(wiek):
-    if wiek < 0:
-        raise NieprawidlowaWartosc("Wiek nie może być wartością ujemną.")
-    print(f"Wiek ustawiony na {wiek}.")
+def wczytaj_liczbe():
+    try:
+        liczba = int(input("Podaj liczbę: "))
+    except ValueError:
+        print("To nie jest prawidłowa liczba.")
+    else:
+        print(f"Wprowadzono liczbę: {liczba}")
+        # Tutaj możemy wykonać dodatkowe operacje związane z liczbą
+    finally:
+        print("Koniec próby wczytania liczby.")
 
-# Przykładowe wywołanie funkcji
-try:
-    ustaw_wiek(-5)
-except NieprawidlowaWartosc as e:
-    print(e)
-
+wczytaj_liczbe()

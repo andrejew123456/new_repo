@@ -1,13 +1,22 @@
-###   ZADANIE ###
+####   Dekoratory   ####
+import datetime
+import time
 
-"""
-Zadanie
-Stwórz dekorator, który będzie mierzył i wyświetlał czas wykonania dowolnej funkcji. Dekorator ten może być używany do monitorowania wydajności różnych części kodu.
 
-Krok 1: Definicja Dekoratora
-Stwórz funkcję dekoratora, która przyjmuje funkcję jako argument i zwraca nową funkcję, która mierzy czas wykonania oryginalnej funkcji.
+def my_decorator(func):
+    def wrapper():
+        print("Before func.")
+        print(datetime.datetime.now())
+        func()
+        time.sleep(2)
+        print("After func.")
+        print(datetime.datetime.now())
+    return wrapper
 
-Krok 2: Użycie Dekoratora
-Użyj dekoratora measuretime do zmierzenia czasu wykonania przykładowej funkcji.
+@my_decorator
+def say_hello():
+    print("Hello!")
 
-"""
+
+say_hello()
+# my_decorator(say_hello)()

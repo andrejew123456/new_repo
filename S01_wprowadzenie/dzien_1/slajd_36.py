@@ -1,14 +1,22 @@
-"""
-W laboratorium przechowywane są różne substancje w małych pojemnikach. Każdy pojemnik ma etykietę z nazwą substancji.
-Twoim zadaniem jest zorganizowanie informacji o tych substancjach przy użyciu Pythona.
+#krotka
+tuple = (1, 2,3,4)
+len(tuple)
 
-Dane:
-substancje = ["woda", "etanol", "kwas siarkowy", "woda", "chlor", "etanol"]
+# tuple[4] = 0
 
-Zadania do wykonania:
-Zliczenie Substancji: Oblicz, ile razy każda substancja pojawia się na liście.
-Uporządkuj listę substancji
-Dodaj do listy dodatkowe substancje
-przypisz do zmiennej i zwróć elementy listy z pozycji 1,2,3
 
-"""
+### Mutowalnosc  ###
+
+immutable = (1, 2, 3)  # Krotka, niemutowalna
+mutable = [1, 2, 3]	# Lista, modyfikowalna
+mutable[0] = 100   	# Zmiana zawartości listy
+
+
+l = ["Ala", " ", "ma", " ", "kota"]
+tl = ("Ala", " ", "ma", " ", "psa", " ", "w", " ", "tupli")
+print(l)
+print(tl)
+print("$".join(l))
+
+txt = "#Ala #ma #kota"
+print(txt.split("#"))

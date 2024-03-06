@@ -1,6 +1,5 @@
-#ValueError
-int("xyz")
+#NameError
+n
 
-#IOError
-with open("nieistniejacy_plik.txt") as f:
-    content = f.read()
+#ZeroDivisionError
+1/0

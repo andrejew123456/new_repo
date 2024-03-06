@@ -1,8 +1,6 @@
-#len()
-zdanie = "Python jest zabawny."
-print("Liczba znaków w zdaniu:", len(zdanie))
+print("Witaj, świecie!")
+print("Wynik działania wynosi:", 10 + 5)
 
-#type()
-print(type(123))        # Wynik: <class 'int'>
-print(type("Python"))   # Wynik: <class 'str'>
-print(type([1, 2, 3]))  # Wynik: <class 'list'>
+
+imie = input("Jak masz na imię? ")
+print("Cześć,", imie)

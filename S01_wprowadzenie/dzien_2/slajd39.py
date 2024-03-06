@@ -1,8 +1,6 @@
-#IndexError
-a = [1,2,3]
-a[4]
+#Exception
+raise Exception("To jest ogólny wyjątek")
 
-#KeyError
-dict= {1: "1", 2: "2"}
-
-dict[3]
+#TypeError
+liczba = 5
+"abc" + liczba

@@ -1,20 +1,18 @@
-### append  ###
-L = ['najsmaczniejsza', 'jest', 'MIELONKA!']
-L.append('puszkowana')
-L >>  ['najsmaczniejsza', 'jest', 'MIELONKA!', 'puszkowana' ]
+### Podstawowe operacje na listach ###
+
+#  + i *
+# [1, 2 , 3] + [4, 5, 6] >> [1, 2, 3, 4, 5, 6]
+# [1, 2, 3] * 3  >>  [1, 2, 3, 1, 2, 3, 1, 2, 3]
+#
+# #slice
+# L = ['mielonka', "Mielonka", "MIELONKA!"]
+# L[2]   >>  'MIELONKA!'
+# L[-2]  >>  'Mielonka'
+# L[1:]  >>  ['Mielonka', 'MIELONKA!']
+
+#macierze
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrix[1]  >> [4, 5, 6]
+matrix[1][1] >> 5
 
 
-
-### sort () ###
-L = ['abc', 'ABD', 'aBe']
-L.sort()  >> ['ABD', 'aBe', 'abc']
-L.sort(key=str.lower)
-L   >>   ['abc', 'ABD', 'aBe']
-L.sort(key=str.lower, reverse=True)
-L   >>  ['aBe', 'ABD', 'abc']
-
-
-### sorted()
-L = ['abc', 'ABD', 'aBe']
-sorted(L)  >> ['ABD', 'aBe', 'abc']
-sorted(L, key=str.lower)  >> ['abc', 'ABD', 'aBe']

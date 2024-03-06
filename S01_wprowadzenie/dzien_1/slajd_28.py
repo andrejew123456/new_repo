@@ -1,6 +1,9 @@
-print("Witaj, świecie!")
-print("Wynik działania wynosi:", 10 + 5)
+# Użycie metody str.format()
+imie = "Anna"
+powitanie = "Cześć, {}!".format(imie)
+print(powitanie)
 
-
-imie = input("Jak masz na imię? ")
-print("Cześć,", imie)
+# Użycie f-string
+wiek = 30
+tekst_z_fstring = f"{imie} ma {wiek} lat."
+print(tekst_z_fstring)

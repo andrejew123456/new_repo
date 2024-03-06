@@ -1,9 +1,10 @@
-# Użycie metody str.format()
-imie = "Anna"
-powitanie = "Cześć, {}!".format(imie)
-print(powitanie)
+tekst = "Python jest super!"
 
-# Użycie f-string
-wiek = 30
-tekst_z_fstring = f"{imie} ma {wiek} lat."
-print(tekst_z_fstring)
+# Wyszukiwanie w tekście
+szukaj = "Python"
+pozycja = tekst.find(szukaj)
+print(f"'{szukaj}' znajduje się na pozycji: {pozycja}")
+
+# Podmiana w tekście
+tekst_zmieniony = tekst.replace("super", "wspaniały")
+print(tekst_zmieniony)

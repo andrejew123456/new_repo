@@ -1,10 +1,10 @@
-### SLOWNIKI ###
+###   ROZWIAZANIE  ###
+substancje = ["woda", "etanol", "kwas siarkowy", "woda", "chlor", "etanol"]
 
-D = {'mielonka': 2, 'szynka': 1, 'jajka': 3}
-print(D["mielonka"])
-
-print(len(D))           #dlugosc slownika
-print(D.keys())        #klucze slownika
-
-D['szynka'] = ['grilowanie', 'pieczenie', 'smazenie']           #zmiana wpisu slownika
-print(D)
+liczba_substancji = len(substancje)
+print(liczba_substancji)
+substancje.sort()
+print(substancje)
+substancje.append("azot")
+substancje.extend(["kwas mlekowy", "siarka"])
+print(substancje)

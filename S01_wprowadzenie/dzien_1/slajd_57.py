@@ -1,30 +1,14 @@
-"""
-Napisz program, który używa pętli while do czytania liczby od użytkownika,
-a następnie sumuje te liczby do czasu wprowadzenia '0', po czym zakończy działanie.
+"""Kontrola przepływu"""
 
-Utwórz pętlę, która przetwarza dane wejściowe od użytkownika i kontynuuje działanie do momentu wprowadzenia określonego słowa kluczowego.
-"""
+# Użycie break
+# while True:
+#     odpowiedz = input("Wpisz 'exit', aby wyjść: ")
+#     if odpowiedz == "exit":
+#         break
 
-# Inicjalizacja zmiennej do przechowywania sumy
-suma = 0
-
-while True:
-    # Prośba o wprowadzenie liczby
-    liczba = input("Wprowadź liczbę (lub '0' aby zakończyć): ")
-
-    # Sprawdzenie, czy wprowadzona wartość to '0'
-    if liczba == '0':
-        break
-
-    # Sprawdzenie, czy wprowadzona wartość jest liczbą
-    # try:
-    liczba = float(liczba)
-    # except ValueError:
-    #     print("To nie jest liczba. Proszę spróbować ponownie.")
-    #     continue
-
-    # Dodanie liczby do sumy
-    suma += liczba
-
-# Wyświetlenie sumy po wyjściu z pętli
-print("Suma wprowadzonych liczb wynosi:", suma)
+#
+# Użycie continue
+for liczba in range(10):
+    if liczba % 2 == 0:
+        continue
+    print(liczba)
